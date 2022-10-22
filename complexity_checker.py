@@ -149,7 +149,5 @@ if __name__ == '__main__':
     options, args = parser.parse_args()
 
     result = ComplexityChecker(options.input_directory, options.min_threshold).run()
-    if options.format == 'table':
-        ComplexityReport(result, options.output_file).asTable()
-    else:
-        ComplexityReport(result, options.output_file).asCSV()
+    report = ComplexityReport(result, options.output_file)
+    report.asTable() if options.format == 'table' else report.asCSV()
