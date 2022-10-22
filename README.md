@@ -19,12 +19,27 @@ Options:
 Examples:
 
 ```
-me@host:/$ python3 complexity_checker.py --min=5  --dir=./mccabe-master/
+me@host:/$ python3 complexity_checker.py --min=1  --dir=./sample/
 ```
 
-| file                             | method                                 |   complexity | score   |
-|----------------------------------|----------------------------------------|--------------|---------|
-| ./mccabe-master/mccabe.py | PathGraphingAstVisitor._subgraph_parse |            5 | LOW     |
-| ./mccabe-master/mccabe.py | get_code_complexity                    |            5 | LOW     |
-| ./mccabe-master/mccabe.py | _read                                  |            5 | LOW     |
-| ./mccabe-master/mccabe.py | main                                   |            7 | MEDIUM  |
+| file                           | method                                |   complexity | score   |
+|--------------------------------|---------------------------------------|--------------|---------|
+| ./sample/complexity_checker.py | CaptureStdout.__enter__               |            1 | LOW     |
+| ./sample/complexity_checker.py | CaptureStdout.__exit__                |            1 | LOW     |
+| ./sample/complexity_checker.py | FileSeeker.__init__                   |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityChecker.__init__            |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityChecker._check_file         |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityChecker.run                 |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport.__init__             |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport._sort_by_complexity  |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport._output_as_table     |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport._write_to_file       |            1 | LOW     |
+| ./sample/complexity_checker.py | ComplexityChecker._check_target_files |            2 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport._output_as_csv       |            2 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport.asTable              |            2 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport.asCSV                |            2 | LOW     |
+| ./sample/complexity_checker.py | FileSeeker.is_black_listed            |            3 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport._parse_mccabe_output |            3 | LOW     |
+| ./sample/complexity_checker.py | 143                                   |            3 | LOW     |
+| ./sample/complexity_checker.py | FileSeeker.run                        |            4 | LOW     |
+| ./sample/complexity_checker.py | ComplexityReport._get_complexity_rate |            5 | LOW     |
