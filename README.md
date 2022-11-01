@@ -1,5 +1,5 @@
 # mccabe-complexity-checker
-A CLI tool that makes it easier to use mccabe complexity checker (for Python) available at https://github.com/PyCQA/mccabe
+A CLI tool that makes it easier to use mccabe complexity checker (for Python) available at https://github.com/PyCQA/mccabe in larger code-bases.
 
 ```
 Usage: complexity_checker.py [options]
